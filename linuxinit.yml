@@ -1,0 +1,13 @@
+---
+- name: Create a folder and set permissions
+  hosts: all  # Change to your target host or group
+  become: yes  # Run as sudo/root
+
+  tasks:
+    - name: Create /tmp/oscpexam directory
+      file:
+        path: /tmp/oscpexam
+        state: directory
+        mode: "0775"  # Read/Write for owner & group, Read-Only for others
+        owner: root
+        group: root
