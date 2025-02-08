@@ -1,0 +1,7 @@
+[linuxservers]
+kali
+web
+
+[kali]
+192.168.1.125
+  
